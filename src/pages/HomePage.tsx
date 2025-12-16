@@ -310,8 +310,8 @@ export default function HomePage() {
 
     
       <section className="relative">
-        <div className="mx-auto max-w-6xl px-5 pb-16">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10">
+        <div className="ms-auto container-xl  pb-16">
+          <div className="rounded-none border border-white/10 bg-white/5 py-14 px-6 backdrop-blur md:p-10">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="text-2xl font-semibold tracking-tight md:text-3xl">

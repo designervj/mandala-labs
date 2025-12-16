@@ -26,8 +26,8 @@ export default function Header() {
             <div className="flex items-baseline gap-1 ">
               <h3 className="text-[30px] font-semibold text-white">
                 Mandala Labs
-                <span className="text-[14px] tracking-widest text-white/60 font-medium ps-1">
-                xyz
+                <span className="text-[14px] tracking-widest text-white/60 font-medium ">
+                .xyz
               </span>
               </h3>
             
