@@ -110,7 +110,7 @@ export default function HomePage() {
      <AIWorkshopSection/>
 
       {/* HERO */}
-      <section id="product" className="relative">
+      {/* <section id="product" className="relative">
         <div className="mx-auto max-w-6xl px-5 pt-16 pb-10 md:pt-20">
           <Pill>Code-first for developers • Content-first for teams</Pill>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* HERO MOCK UI */}
+         
             <div className="relative">
               <div className="absolute -inset-6 rounded-3xl bg-white/5 blur-2xl" />
               <div className="relative rounded-3xl border border-white/10 bg-black/35 p-4 backdrop-blur">
@@ -188,19 +188,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* STATS */}
+          
           <div className="mt-12 grid gap-4 md:grid-cols-3">
             <Stat value="2–6 weeks" label="Typical MVP timeline" />
             <Stat value="99.9%" label="Uptime-ready architecture" />
             <Stat value="A+ UI" label="Grid + beams + noise polish" />
           </div>
         </div>
-      </section>
+      </section> */}
      
     
 
       {/* FEATURES */}
-      <section id="features" className="relative">
+      {/* <section id="features" className="relative">
         <div className="mx-auto max-w-6xl px-5 py-14">
           <div className="text-xs uppercase tracking-widest text-white/45">Features</div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-4xl">
@@ -222,10 +222,10 @@ export default function HomePage() {
             <Feature icon={<ArrowRight className="h-5 w-5" />} title="Conversion" desc="Hero + CTA + proof blocks like SaaS sites." />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CUSTOMERS */}
-      <section id="customers" className="relative">
+      {/* <section id="customers" className="relative">
         <div className="mx-auto max-w-6xl px-5 py-14">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10">
             <div className="text-xs uppercase tracking-widest text-white/45">Customers</div>
@@ -250,10 +250,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* PRICING */}
-      <section id="pricing" className="relative">
+      {/* <section id="pricing" className="relative">
         <div className="mx-auto max-w-6xl px-5 py-14">
           <div className="text-xs uppercase tracking-widest text-white/45">Pricing</div>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-4xl">Simple plans</h2>
@@ -306,9 +306,9 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* CTA */}
+    
       <section className="relative">
         <div className="mx-auto max-w-6xl px-5 pb-16">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10">
@@ -335,8 +335,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="relative border-t border-white/10 bg-black/30 backdrop-blur">
+     
+      {/* <footer className="relative border-t border-white/10 bg-black/30 backdrop-blur">
         <div className="mx-auto max-w-6xl px-5 py-10">
           <div className="flex flex-col gap-8 md:flex-row md:justify-between">
             <div>
@@ -371,7 +371,7 @@ export default function HomePage() {
             © {new Date().getFullYear()} YourBrand — Dark Mode • Grid • Dots • Noise • Beams
           </div>
         </div>
-      </footer>
+      </footer> */}
     </main>
   );
 }

@@ -1,167 +1,189 @@
 "use client";
+
 import React, { useState } from "react";
-import { Globe, Mail, MapPin, Menu, PhoneCall, X } from "lucide-react";
-import footerLogo from "../../../public/assets/Image/logo-footer.svg";
-import appStore from "../../../public/assets/Image/appStore.png";
-import googlePlay from "../../../public/assets/Image/googlePlay.png";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
-  FaHeadset,
-} from "react-icons/fa";
+import { ArrowRight, Moon, Sun } from "lucide-react";
 
-/* ---------------- FOOTER ---------------- */
-const Footer = () => {
+export default function FooterGrid() {
+  const [mode, setMode] = useState<"dark" | "light">("dark");
+
   return (
-    <footer className="bg-[#008a2c] text-gray-800">
-      {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 grid grid-cols-1 md:grid-cols-[50%_50%] gap-12">
-        {/* Brand */}
-        <div className="w-[100%] md:w-[75%]">
-        
-          <div className="flex items-center gap-3">
-            <span className="text-[#fff] font-bold text-2xl md:text-3xl">
-             Strengthening Agriculture-Based Livelihoods In The Thar Desert (SABL)
-            </span>
+    <footer
+      className="relative w-full overflow-hidden"
+      style={{ background: mode === "dark" ? "#1f2022" : "#f7f7f8" }}
+    >
+      {/* Grid lines (full footer) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-100"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "320px 220px",
+        }}
+      />
+
+      {/* Container */}
+      <div className="relative mx-auto max-w-[1400px]">
+        {/* TOP BIG ROW */}
+        {/* <div className="grid grid-cols-12 border-b border-white/10"> */}
+        {/* LEFT (Newsletter) */}
+
+
+        {/* RIGHT (Links + Badges) */}
+        <div className="col-span-12 lg:col-span-5 px-8 md:px-12 py-12 md:py-14">
+          <div className="grid grid-cols-4 gap-10">
+            {/* Column 1 */}
+
+            <div>
+              <h3 className="text-[30px] font-semibold text-white">
+                Mandala Labs
+                <span className="text-[14px] tracking-widest text-white/60 font-medium ps-1">
+                  xyz
+                </span>
+              </h3>
+            </div>
+
+            <div>
+              <div className="text-sm text-white/45 mb-5">About</div>
+              <ul className="space-y-3">
+                {["Company", "Portfolio", "Partnerships", "Newsroom", "Media kit", "Careers", "Contact"].map(
+                  (t) => (
+                    <li key={t}>
+                      <a className="text-white/80 hover:text-white transition" href="#">
+                        {t}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+
+
+
+            <div>
+              <div className="text-sm text-white/45 mb-5">
+                Delivery models
+              </div>
+              <ul className="space-y-3">
+                {["Dedicated development teams", "Project-based delivery"].map((t) => (
+                  <li key={t}>
+                    <a className="text-white/80 hover:text-white transition" href="#">
+                      {t}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+            </div>
+
+            <div className="text-white/80 leading-relaxed">
+              <div className="text-sm text-white/45 mb-5">
+                Address
+              </div>
+
+              <div className="mb-5">
+                <div className="text-white/90 font-medium">US: +1 (718) 374-5043</div>
+                <div className="text-white/55">(Global)</div>
+              </div>
+
+              <div className="mb-5">
+                <div className="text-white/90 font-medium">US: +1 (800) 338-4090</div>
+                <div className="text-white/55">Toll-free</div>
+              </div>
+
+              <div>
+                <div className="text-white/90 font-medium">
+                  575 Lexington Avenue, 14th Floor
+                </div>
+                <div className="text-white/55">New York, NY 10022</div>
+              </div>
+            </div>
+
           </div>
 
-          <div className="mt-4">
-            <img src="./assets/Image/EN_FundedbytheEU_RGB_WHITE Outline.png" alt="Eu Logo" className="w-96"></img>
-          </div>
-          {/* <p className="mt-4 text-white leading-relaxed text-base">
-            Empowering sustainable agriculture and innovative technology to
-            build a better future for rural communities.
-          </p> */}
+          {/* Badges row */}
 
-
-
-        
-        
         </div>
 
-        {/* Quick Links */}
-        {/* <div>
-          <h4 className="text-xl font-semibold text-white mb-5 border-l-4 border-[#fff] pl-3">
-            Quick Links
-          </h4>
-          <ul className="space-y-3 text-white">
-            {[
-              "Home",
-              "About Gravis",
-              "SABL Project",
-              "Resources",
-              "Photo Gallery",
-              "Get Involved",
-            ].map((item, i) => (
-              <li key={i}>
-                <a
-                  href="#"
-                  className="hover:text-[#f1f1f1] transition-colors duration-300">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div> */}
 
-        {/* Customer Area */}
-        {/* <div>
-          <h4 className="text-xl font-semibold mb-5 text-white border-l-4 border-[#fff] pl-3">
-            Customer Area 
-          </h4>
-          <ul className="space-y-3  text-white">
-            {[
-              // "My Account",
 
-              // "Tracking List",
-              "Terms & Conditions",
-              "Privacy Policy",
-            ].map((item, i) => (
-              <li key={i}>
-                <a
-                  href="#"
-                  className="hover:text-[#fff] transition-colors duration-300">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div> */}
+        {/* </div> */}
 
-        {/* Contact */}
-         <div>
-      <h4 className="text-xl font-semibold mb-5 text-white border-l-4 border-[#fff] pl-3">
-        Contact
-      </h4>
+        {/* BOTTOM ROW */}
 
-      {/* <p className="text-white">
-        Have any questions or need help? Reach out to us anytime.
-      </p> */}
 
-      {/* 🔹 Phone */}
-      <div className="mt-3 flex items-center gap-3">
-        <PhoneCall className="w-5 h-5 text-white" />
-        <a
-          href="tel:+912912785116"
-          className="text-base font-medium text-white hover:text-[#f1f1f1]"
-        >
-          +91-291-2785-116
-        </a>
+
+        <div className="mt-10 flex flex-wrap items-center gap-4 justify-center lg:justify-start gap-x-6 gap-y-4 ">
+          <div className="rounded-xl bg-white/95 px-4 py-2 text-black text-sm font-semibold">
+            4.9 ★★★★★ <span className="text-black/60 font-medium">Based on reviews</span>
+          </div>
+
+          <div className="rounded-xl bg-[#2d3356] px-4 py-2 text-white text-sm font-semibold">
+            ISO <span className="font-medium text-white/80">27001 Certified</span>
+          </div>
+
+          <div className="rounded-xl bg-[#0b5c74] px-4 py-2 text-white text-sm font-semibold">
+            BBB <span className="font-medium text-white/80">Accredited</span>
+          </div>
+        </div>
+
+        <div className="col-span-12 lg:col-span-7 px-8 md:px-12 py-12 md:py-14 border-r border-white/10">
+          <h3
+            className="text-[28px] md:text-[34px] leading-[1.2] font-medium tracking-tight"
+            style={{ color: mode === "dark" ? "rgba(255,255,255,0.92)" : "#111" }}
+          >
+            Subscribe to our newsletter for software <br className="hidden md:block" />
+            and AI industry insights and company <br className="hidden md:block" />
+            news!
+          </h3>
+
+          {/* Email row */}
+          <div className="mt-10">
+            <div className="flex items-center gap-3 border-b border-white/15 pb-4">
+              <input
+                placeholder="Email address*"
+                className="w-full bg-transparent text-base outline-none placeholder:text-white/35"
+                style={{
+                  color: mode === "dark" ? "rgba(255,255,255,0.9)" : "#111",
+                }}
+              />
+              <button
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/15 hover:border-white/30 transition"
+                aria-label="submit"
+              >
+                <ArrowRight
+                  className="h-5 w-5"
+                  style={{ color: mode === "dark" ? "rgba(255,255,255,0.85)" : "#111" }}
+                />
+              </button>
+            </div>
+
+            {/* Consent */}
+            <label className="mt-4 flex items-start gap-3 text-sm text-white/45">
+              <input type="checkbox" className="mt-1 h-4 w-4 accent-white/80" />
+              <span className="leading-relaxed">
+                I agree to the{" "}
+                <a className="underline underline-offset-4 text-white/55 hover:text-white/80" href="#">
+                  Privacy Policy
+                </a>{" "}
+                and give my permission to process my personal data for the purposes
+                specified in the Privacy Policy.
+              </span>
+            </label>
+          </div>
+
+
+        </div>
+
       </div>
 
 
-      {/* 🔹 Email */}
-      <div className="mt-3 flex items-center gap-3">
-        <Mail className="w-5 h-5 text-white" />
-        <a
-          href="mailto:email@gravis.org.in"
-          className="text-base font-medium text-white hover:text-[#f1f1f1]"
-        >
-          email@gravis.org.in
-        </a>
+
+      {/* tiny bottom line */}
+      <div className="mt-10 py-6 border-t border-white/10 text-sm text-white/45 text-center">
+        © {new Date().getFullYear()} Mandala Labs. All rights reserved.
       </div>
 
-      {/* 🔹 Address */}
-      <div className="mt-3 flex items-center gap-3 max-w-[90%]">
-        <MapPin className="md:w-6  w-12 h-12 md:h-6  text-white mt-1" />
-        <p className="text-base font-medium text-white leading-snug">
-          3/437, 458, M.M Colony, Pal Road,
-           Jodhpur – 342008, Rajasthan, India
-        </p>
-      </div>
-
-       
-    </div>
-
-    
-      </div>
-
-      {/* Divider */}
-      <div className="border-t border-gray-300 text-center" />
-
-      {/* Bottom */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-6 flex justify-center font-semibold text-white  text-sm">
-        <p>© 2025 SABL. All Rights Reserved.</p>
-      </div>
     </footer>
-  );
-};
-
-/* ---------------- LAYOUT WRAPPER ---------------- */
-export default function MainLayout(
-  {
-    //   children,
-    // }: {
-    //   //children: React.ReactNode;
-    //
-  }
-) {
-  return (
-    <div className="flex flex-col bg-white text-gray-900">
-      <Footer />
-    </div>
   );
 }

@@ -748,22 +748,7 @@ function MethodsTable() {
 
 
       {/* Footer */}
-      <div className="mx-auto max-w-[1320px] px-6">
-        <div
-          className="grid grid-cols-12 border-t py-12 text-white/60"
-          style={{
-            borderColor: COLORS.gridLine,
-            borderLeft: `1px solid ${COLORS.gridLine}`,
-            borderRight: `1px solid ${COLORS.gridLine}`,
-          }}
-        >
-          <div className="hidden lg:block lg:col-span-3" />
-          <div className="col-span-12 lg:col-span-9 flex flex-col gap-8 px-12">
-            <div className="text-2xl font-semibold text-white">vention</div>
-            <div className="text-sm">© {new Date().getFullYear()} — Fixed gaps + all text white</div>
-          </div>
-        </div>
-      </div>
+    
     </section>
   );
 }

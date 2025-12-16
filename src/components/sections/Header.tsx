@@ -23,7 +23,17 @@ export default function Header() {
         <div className="mx-auto max-w-[1440px] px-10">
           <div className="flex h-[72px] items-center justify-between">
             {/* LOGO */}
-            <div className="text-[28px] font-medium">venton</div>
+            <div className="flex items-baseline gap-1 ">
+              <h3 className="text-[30px] font-semibold text-white">
+                Mandala Labs
+                <span className="text-[14px] tracking-widest text-white/60 font-medium ps-1">
+                xyz
+              </span>
+              </h3>
+            
+            </div>
+
+
 
             {/* NAV */}
             <nav className="flex h-full items-center gap-10 text-[15px]">
@@ -54,7 +64,7 @@ export default function Header() {
             {/* ACTION */}
             <div className="flex items-center gap-6">
               <Search size={18} />
-              <button className="bg-[#ff6a3d] px-6 py-3 text-sm font-medium text-black">
+              <button className="bg-[#ff4df2] px-6 py-3 text-sm font-medium text-white font-medium">
                 Contact us
               </button>
             </div>
